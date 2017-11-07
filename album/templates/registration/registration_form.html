@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base1.html' %}
 {% load i18n %}
 {% load crispy_forms_tags %}
 
@@ -10,7 +10,7 @@
   {% csrf_token %}
   {{ form|crispy }}
 
-  <input class='btn btn-block btn-primary' type="submit" value="{% trans 'Registrarme' %}" />
+  <input class='btn btn-primary btn-primary' type="submit" value="{% trans 'Registrarme' %}" />
 </form>
 </div>
 </div>

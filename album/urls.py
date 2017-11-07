@@ -1,8 +1,8 @@
 from django.conf.urls import url
 from album import views
-
+from django.contrib.auth.decorators import login_required
 urlpatterns = [
-    url(r'^$', views.base, name='base'),
+    url(r'^$', login_required(views.base), name='base'),
     url(r'^category/$', views.category, name='category-list'),
     url(r'^category/(\d+)/detail/$', views.category_detail, name='category-detail'),
 

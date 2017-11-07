@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base1.html' %}
 {% load i18n %}
 {% load crispy_forms_tags %}
 
@@ -10,11 +10,11 @@
   {% csrf_token %} 
   {{ form|crispy }}
 
-  <input class='btn btn-block btn-primary' type="submit" value="{% trans 'Iniciar sesion' %}" />
+  <input class='btn btn-primary btn-primary' type="submit" value="{% trans 'Iniciar sesion' %}" />
   <input type="hidden" name="next" value="{{ next }}" />  
 </form>
-	<a href="{% url 'social:begin' 'twitter' %}">Login with Twitter</a><br>
-  	<a href="{% url 'social:begin' 'facebook' %}">Login with facebook</a>
+	<a href="{% url 'social:begin' 'twitter' %}">Registrate con Twitter</a><br>
+  	<a href="{% url 'social:begin' 'facebook' %}">Registrate con facebook</a>
 </div>
 </div>
 

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -67,9 +68,9 @@ MIDDLEWARE = [
 ]
 
 LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-
+LOGOUT_URL = '/accounts/logout'
 ROOT_URLCONF = 'myapps.urls'
+LOGIN_REDIRECT_URL="/album"
 
 
 
@@ -171,5 +172,5 @@ SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/album'
 SOCIAL_AUTH_TWITTER_KEY = '701SqvP21Ux1akO79dbxzXl3F'
 SOCIAL_AUTH_TWITTER_SECRET = 'zkGUon4PCupKR0HsQ9rYAC1sOfGQlWgyJAy1FJUcBb89GHy7Ji'
 
-SOCIAL_AUTH_FACEBOOK_KEY = '143352692963571'
-SOCIAL_AUTH_FACEBOOK_SECRET = '17ac1dc14fb48e9509111563757cc520'
+SOCIAL_AUTH_FACEBOOK_KEY = '361733864296519'
+SOCIAL_AUTH_FACEBOOK_SECRET = '81303796627e40a3fa1a4ce24f046a20'
