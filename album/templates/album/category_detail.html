@@ -6,7 +6,7 @@
 <hr>
 {% endblock section %}
 
-{% block maincontent %}
+{% block content %}
 <div>
 	<table border="1px">
 		<tr>
@@ -15,7 +15,7 @@
 				<div>{{p.title}}</div>
 				<div>
 					<a href="{% url 'photo-detail' p.id %}">
-					<img src="{% static p.photo.url %}" style="width:200px; height:200px">
+					<img src="{% static p.photo.url %}" style="width:200px; height:200px;"/>
 				</a>
 			</div>
 		</td>
@@ -23,4 +23,4 @@
 	</tr>
 	</table>
 </div>
-{% endblock maincontent %}
+{% endblock content %}

@@ -7,7 +7,7 @@
 	<hr>
 {% endblock section %}
 
-{% block maincontent %}
+{% block content %}
 	<div class="row well">
 		{% for p in object_list.all %}
 			<div class="col-md-6 well">
@@ -21,14 +21,14 @@
 						</a>
 					</div>
 					<div class="panel-footer">
-						{% if p.commment %}
+						{% if p.comment %}
 							{{ p.comment }}
 						{% else %}
-							<a href="{% url 'photo-update' p.id %}">Edit Comments</a>
+							<a class="btn btn-info" style="color:white" href="{% url 'photo-update' p.id %}">Edit Comments</a>
 							{% endif %}
 						</div>
 					</div>
 				</div>
 			{% endfor %}
 		</div>
-{% endblock maincontent %}
+{% endblock content %}
