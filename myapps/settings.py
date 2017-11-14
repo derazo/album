@@ -38,19 +38,19 @@ EMAIL_USE_TLS = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-  
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social_django',
     'crispy_forms',
     'album',
-    'registration',
+    'rest_framework',
     'django_adminlte',
     'django_adminlte_theme',
+    'registration',
+    'social_django',
 
   
 ]
@@ -67,7 +67,7 @@ MIDDLEWARE = [
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
-LOGIN_URL = 'login'
+
 LOGOUT_URL = '/accounts/logout'
 ROOT_URLCONF = 'myapps.urls'
 LOGIN_REDIRECT_URL="/album"
@@ -161,12 +161,12 @@ REGISTRATION_AUTO_LOGIN = True
 SITE_ID=1
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
-AUTHENTICATION_BACKENDS=(
-        'social.backends.facebook.FacebookAppOAuth2',
-        'social.backends.facebook.FacebookOAuth2',
-        'social.backends.twitter.TwitterOAuth',
-        'django.contrib.auth.backends.ModelBackend',
-    )
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/album'
 
 SOCIAL_AUTH_TWITTER_KEY = '701SqvP21Ux1akO79dbxzXl3F'
